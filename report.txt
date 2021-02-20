@@ -1,10 +1,23 @@
 *-*-*-*-*| Memory Statistics Report |*-*-*-*-*
 > Summary Report:
 ---------------------------------------------------------------------
-Memory Consist of 1 Blocks with total size = 15 KB (all are unused).
+Memory Consist of 10 Blocks with total size = 4864 KB
+and allocated with 3 processes with total size = 1046 KB in 3 blocks Causes 363 KB of Fragmentation.
+in other words...
+Total used memory = 1409 KB (actually in use = 1046 KB , Fragmented = 363 KB ).
+Total unused memory = 3712
 
 --------------------------------------------------------------------
 > Detailed Report:
-	Block # 1 { size = 15 KB , Not Allocated , start from address 0 to address 15359}
+	Block # 1 { size = 128 KB , Not Allocated , start from address 0 to address 131071}
+	Block # 2 { size = 128 KB and allocated with Process : p3 { ID = 4 , size = 78 }	, and internal fragmentation size = 50 KB. , start from address 131072 to address 262143}
+	Block # 3 { size = 256 KB , Not Allocated , start from address 262144 to address 524287}
+	Block # 4 { size = 256 KB , Not Allocated , start from address 524288 to address 786431}
+	Block # 5 { size = 512 KB , Not Allocated , start from address 786432 to address 1310719}
+	Block # 6 { size = 512 KB , Not Allocated , start from address 1310720 to address 1835007}
+	Block # 7 { size = 512 KB and allocated with Process : p2 { ID = 3 , size = 459 }	, and internal fragmentation size = 53 KB. , start from address 1835008 to address 2359295}
+	Block # 8 { size = 512 KB and allocated with Process : p1 { ID = 2 , size = 355 }	, and internal fragmentation size = 157 KB. , start from address 2359296 to address 2883583}
+	Block # 9 { size = 1024 KB , Not Allocated , start from address 2883584 to address 3932159}
+	Block # 10 { size = 1024 KB , Not Allocated , start from address 3932160 to address 4980735}
 
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

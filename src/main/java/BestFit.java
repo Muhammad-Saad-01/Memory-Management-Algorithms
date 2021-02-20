@@ -1,5 +1,5 @@
 public class BestFit implements AllocationAlgorithm {
-    private final int MAX_BLOCK_SIZE = 256;
+    private final int MAX_BLOCK_SIZE = Integer.MAX_VALUE;
 
     /**
      * Assigns the process to the best available open memory segment of sufficient size

@@ -3,16 +3,9 @@ public class Block {
     private boolean isAllocated;
     private Process process;
     private int internalFragmentation;
-    private static int idGenerator = 1;
-    private int id;
+    private static int idGenerator = 0;
+    private final int id;
     private int startAddress, endAddress;
-
-   // Block next = null, previous = null;
-
-    public Block(int size, boolean isAllocated, Process process) {
-        this.size = size;
-        setProcess(process);
-    }
 
     public Block(int size) {
         this.size = size;
@@ -23,7 +16,7 @@ public class Block {
         startAddress = endAddress = 0;
     }
 
-    boolean isAllocated() {
+    public boolean isAllocated() {
         return isAllocated;
     }
 
@@ -43,15 +36,8 @@ public class Block {
         internalFragmentation = size;
     }
 
-    @Override
-    public String toString() {
-        return "Block " +
-                "# " + id +
-                " { size = " + size +" KB"+
-                (isAllocated ? " and allocated with Process : " + process + ", and internal fragmentation size = " + internalFragmentation+" KB." : " , Not Allocated") +
-                " , start from address " + getStartAddress() +
-                " to address " + getEndAddress() +
-                "}\n";
+    public int getBlockID() {
+        return id;
     }
 
     public int getSize() {
@@ -61,29 +47,32 @@ public class Block {
     public int getInternalFragmentation() {
         return internalFragmentation;
     }
-    /*
-     * TODO
-     */
-
-    public int getStartAddress() {
-        return startAddress;
-    }
-
-    public int getEndAddress() {
-        return endAddress;
-    }
 
     public void setStartAddress(int startAddress) {
         this.startAddress = startAddress;
+    }
+
+    public int getStartAddress() {
+        return startAddress;
     }
 
     public void setEndAddress(int endAddress) {
         this.endAddress = endAddress;
     }
 
-    public int getBlockID() {
-        return id;
+    public int getEndAddress() {
+        return endAddress;
     }
 
+    @Override
+    public String toString() {
+        return "Block " +
+                "# " + id +
+                " { size = " + size + " KB" +
+                (isAllocated ? " and allocated with Process : " + process + ", and internal fragmentation size = " + internalFragmentation + " KB." : " , Not Allocated") +
+                " , start from address " + getStartAddress() +
+                " to address " + getEndAddress() +
+                "}\n";
+    }
 
 }

@@ -1,11 +1,12 @@
 public class WorstFit implements AllocationAlgorithm {
-    private final int MIN_BLOCK_SIZE = 0;
+    private final int MIN_BLOCK_SIZE = Integer.MIN_VALUE;
 
     /**
      * Assigns the process to the memory segment that leaves the most leftover space
-     * @param process   - The process to be allocated
-     * @param memory    - A reference to the Memory instance the Algorithm is instantiated in
-     * @return          - Block id of allocated process (-1 if allocation failed)
+     *
+     * @param process - The process to be allocated
+     * @param memory  - A reference to the Memory instance the Algorithm is instantiated in
+     * @return - Block id of allocated process (-1 if allocation failed)
      */
     @Override
     public int allocateMemory(Process process, Memory memory) {

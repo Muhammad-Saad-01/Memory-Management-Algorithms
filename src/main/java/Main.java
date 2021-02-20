@@ -1,11 +1,6 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
-    private static final MemoryAllocation bestFitAllocation = new MemoryAllocation(new BestFit());
-    private static final MemoryAllocation firstFitAllocation = new MemoryAllocation(new FirstFit());
-    private static final MemoryAllocation worstFitAllocation = new MemoryAllocation(new WorstFit());
 
     public static void main(String[] args) {
 
@@ -62,45 +57,5 @@ public class Main {
         System.out.println("\t3. Report detailed information about regions of free and allocated memory.");
         System.out.println("\t4. Exit the program");
         System.out.print("Enter your option number : ");
-    }
-}
-
-class test {
-    private static final MemoryAllocation bestFitAllocation = new MemoryAllocation(new BestFit());
-    private static final MemoryAllocation firstFitAllocation = new MemoryAllocation(new FirstFit());
-    private static final MemoryAllocation worstFitAllocation = new MemoryAllocation(new WorstFit());
-
-    public static void main(String[] args) {
-        BlockList blockList = new BlockList();
-        blockList.addBlock(new Block(8));
-        blockList.addBlock(new Block(8));
-        blockList.addBlock(new Block(8));
-        blockList.addBlock(new Block(8));
-        blockList.addBlock(new Block(8));
-        System.out.println(blockList);
-        Memory memory = new Memory(blockList);
-
-        Block b1 = new Block(50);
-        Block b2 = new Block(50);
-
-        System.out.println(b2.getEndAddress());
-
-        BlockList blockList2 = new BlockList();
-        blockList2.addBlock(new Block(8));
-        blockList2.addBlock(new Block(8));
-        blockList2.addBlock(new Block(8));
-        blockList2.addBlock(new Block(8));
-        blockList2.addBlock(new Block(8));
-        System.out.println(blockList);
-        Memory memory1 = new Memory(blockList);
-        Process p1 = new Process("P1", 4);
-        Process p2 = new Process("P2", 5);
-        Process p3 = new Process("P3", 6);
-        Process p4 = new Process("P4", 3);
-        System.out.println(memory1.allocate(worstFitAllocation, p1));
-        System.out.println(memory1.allocate(worstFitAllocation, p2));
-        System.out.println(memory1.allocate(worstFitAllocation, p3));
-        System.out.println(memory1.allocate(worstFitAllocation, p4));
-        System.out.println(memory1);
     }
 }
