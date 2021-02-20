@@ -5,8 +5,15 @@ public class Process {
     private final int size;
     private final String name;
 
+    public Process(String name) {
+
+        this.name = name;
+        this.size = -1;
+        this.processId = -1;
+    }
+
     /**
-     * Creates a process with a process ID (processId) and required App.memory allocation (size)
+     * Creates a process with a process ID (processId) and required memory allocation (size)
      *
      * @param name - Process name
      * @param size - Memory required to allocate

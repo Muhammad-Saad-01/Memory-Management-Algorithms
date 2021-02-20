@@ -1,0 +1,10 @@
+*-*-*-*-*| Memory Statistics Report |*-*-*-*-*
+> Summary Report:
+---------------------------------------------------------------------
+Memory Consist of 1 Blocks with total size = 15 KB (all are unused).
+
+--------------------------------------------------------------------
+> Detailed Report:
+	Block # 1 { size = 15 KB , Not Allocated , start from address 0 to address 15359}
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
